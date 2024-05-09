@@ -16,13 +16,13 @@ from utils import WarpKeyframe
 
 class Dataset_DNeRV_UVG(Dataset):
     def __init__(self, args, transform_rgb, transform_keyframe=None):
-        self.gt_base_dir = './data/UVG/gt'
-        self.keyframe_base_dir = './data/UVG/keyframe/q{}'.format(args.keyframe_quality)
+        self.gt_base_dir = './drive/MyDrive/data/UVG/gt'
+        self.keyframe_base_dir = './drive/MyDrive/data/UVG/keyframe/q{}'.format(args.keyframe_quality)
         self.transform_rgb = transform_rgb
         self.transform_keyframe = transform_keyframe
 
         vid_length_dict = collections.OrderedDict()
-        with open('./data/UVG/annotation/video_length.json', 'r') as fp:
+        with open('./drive/MyDrive/data/UVG/annotation/video_length.json', 'r') as fp:
             vid_length_dict = json.load(fp)
 
         clip_size = args.clip_size
@@ -90,7 +90,7 @@ class Dataset_NeRV_UVG(Dataset):
         self.transform_rgb = transform_rgb
 
         vid_length_dict = collections.OrderedDict()
-        with open('./data/UVG/annotation/video_length.json', 'r') as fp:
+        with open('./drive/MyDrive/data/UVG/annotation/video_length.json', 'r') as fp:
             vid_length_dict = json.load(fp)
 
         clip_size = args.clip_size
@@ -151,13 +151,13 @@ class Dataset_NeRV_UVG(Dataset):
 
 class Dataset_DNeRV_UCF101(Dataset):
     def __init__(self, args, transform_rgb, transform_keyframe=None):
-        self.gt_base_dir = './data/UCF101/gt'
-        self.keyframe_base_dir = './data/UCF101/keyframe/q{}'.format(args.keyframe_quality)
+        self.gt_base_dir = './drive/MyDrive/data/UCF101/gt'
+        self.keyframe_base_dir = './drive/MyDrive/data/UCF101/keyframe/q{}'.format(args.keyframe_quality)
         self.transform_rgb = transform_rgb
         self.transform_keyframe = transform_keyframe
 
         vid_length_dict = collections.OrderedDict()
-        with open('./data/UCF101/annotation/video_length_train.json', 'r') as fp:
+        with open('./drive/MyDrive/data/UCF101/annotation/video_length_train.json', 'r') as fp:
             vid_length_dict = json.load(fp)
 
         clip_size = args.clip_size
@@ -217,11 +217,11 @@ class Dataset_DNeRV_UCF101(Dataset):
 
 class Dataset_NeRV_UCF101(Dataset):
     def __init__(self, args, transform_rgb, transform_keyframe=None):
-        self.gt_base_dir = './data/UCF101/gt'
+        self.gt_base_dir = './drive/MyDrive/data/UCF101/gt'
         self.transform_rgb = transform_rgb
 
         vid_length_dict = collections.OrderedDict()
-        with open('./data/UCF101/annotation/video_length_train.json', 'r') as fp:
+        with open('./drive/MyDrive/data/UCF101/annotation/video_length_train.json', 'r') as fp:
             vid_length_dict = json.load(fp)
 
         clip_size = args.clip_size
